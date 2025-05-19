@@ -17,10 +17,6 @@ def aggiungi_voto():
 
     return "Voto aggiunto con successo!"
 
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))  # Render fornisce la porta
-    app.run(host='0.0.0.0', port=port)
-
 @app.route('/visualizza_voti')
 def visualizza_voti():
     if os.path.exists('voti.txt'):
@@ -30,3 +26,7 @@ def visualizza_voti():
         contenuto = "Nessun voto ancora inserito."
 
     return f"<pre>{contenuto}</pre>"
+
+if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))  # Render fornisce la porta
+    app.run(host='0.0.0.0', port=port)
