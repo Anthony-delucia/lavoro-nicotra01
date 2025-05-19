@@ -1,8 +1,7 @@
 services:
   - type: web
-    name: compito-nicotra01
+    name: finti-voti
     env: python
     buildCommand: ""
     startCommand: python app.py
     plan: free
-    region: oregon
