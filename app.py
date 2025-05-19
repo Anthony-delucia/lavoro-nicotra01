@@ -24,10 +24,10 @@ def visualizza_voti():
             contenuto = f.read()
     else:
         contenuto = "Nessun voto ancora inserito."
+    
+    return render_template('voti.html', voti=contenuto)
 
-    return f"<pre>{contenuto}</pre>"
-
-@app.route('/cancella_voti')
+@app.route('/cancella_voti', methods=['POST'])
 def cancella_voti():
     try:
         os.remove('voti.txt')

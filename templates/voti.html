@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizza e Cancella Voti</title>
+</head>
+<body>
+    <h1>Voti Inseriti</h1>
+    
+    <!-- Visualizza i voti -->
+    <div>
+        <h2>Voti:</h2>
+        <pre>{{ voti }}</pre>
+    </div>
+    
+    <!-- Pulsante per cancellare i voti -->
+    <form action="/cancella_voti" method="post">
+        <button type="submit">Cancella tutti i voti</button>
+    </form>
+    
+    <br>
+    <a href="/">Torna alla home</a>
+</body>
+</html>
