@@ -2,16 +2,35 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title>Inserisci Voto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Voti</title>
 </head>
 <body>
-    <h1>Inserisci il voto di un professore</h1>
+    <h1>Gestione Voti</h1>
+
+    <!-- Form per aggiungere un voto -->
     <form action="/aggiungi_voto" method="POST">
-        <label>Nome Professore:</label>
+        <label for="nome_professore">Nome del Professore:</label>
         <input type="text" name="nome_professore" required><br><br>
-        <label>Voto:</label>
-        <input type="number" name="voto" min="1" max="10" required><br><br>
-        <button type="submit">Aggiungi</button>
+        
+        <label for="voto">Voto:</label>
+        <input type="number" name="voto" required><br><br>
+        
+        <button type="submit">Aggiungi Voto</button>
     </form>
+
+    <hr>
+
+    <!-- Visualizza i voti -->
+    <h2>Voti Inseriti:</h2>
+    <pre>{{ voti }}</pre>
+
+    <hr>
+
+    <!-- Form per cancellare i voti -->
+    <form action="/cancella_voti" method="POST">
+        <button type="submit">Cancella tutti i voti</button>
+    </form>
+
 </body>
 </html>
