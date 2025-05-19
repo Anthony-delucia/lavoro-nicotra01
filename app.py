@@ -27,6 +27,14 @@ def visualizza_voti():
 
     return f"<pre>{contenuto}</pre>"
 
+@app.route('/cancella_voti')
+def cancella_voti():
+    try:
+        os.remove('voti.txt')
+        return "I voti sono stati cancellati!"
+    except FileNotFoundError:
+        return "Non ci sono voti da cancellare (il file non esiste)."
+
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))  # Render fornisce la porta
+    port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
