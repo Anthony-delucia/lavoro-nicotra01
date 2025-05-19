@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: finti-voti
+    name: lavoro-nicotra01
     env: python
     buildCommand: ""
     startCommand: python app.py

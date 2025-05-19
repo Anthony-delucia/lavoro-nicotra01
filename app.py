@@ -18,5 +18,5 @@ def aggiungi_voto():
     return "Voto aggiunto con successo!"
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))  # Usa la porta che Render fornisce
+    port = int(os.environ.get("PORT", 5000))  # Render fornisce la porta
     app.run(host='0.0.0.0', port=port)
